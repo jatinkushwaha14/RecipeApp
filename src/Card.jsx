@@ -1,4 +1,3 @@
-// filepath: /Users/jatinkushwaha/My-Files/dev/chefrecommenadtion/src/Card.jsx
 import { useState } from "react";
 import { HfInference } from "@huggingface/inference";
 
@@ -18,14 +17,25 @@ export default function Card() {
         setInputValue("");
     };
 
+    const removeItem = (index) => {
+        setCount(count.filter((_, i) => i !== index));
+    };
+
     const items = count.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index} className="list-item">
+            {item}
+            <button 
+                className="remove-button" 
+                onClick={() => removeItem(index)}
+            >
+                -
+            </button>
+        </li>
     ));
 
     const generate = async () => {
         if (count.length >= 3) {
             const content = count.join(", ");
-            // console.log("Ingredients:", content);
             setRecipe("Generating recipe...");
             try {
                 const chatCompletion = await client.chatCompletion({
@@ -43,11 +53,9 @@ export default function Card() {
                     max_tokens: 1000
                 });
 
-                // console.log(chatCompletion.choices[0].message.content);
                 setRecipe(chatCompletion.choices[0].message.content);
             } catch (error) {
                 setRecipe("Error generating recipe. Please try again.");
-                // console.error(error);
             }
         } else {
             setRecipe("Please add at least 3 ingredients.");
@@ -83,7 +91,6 @@ export default function Card() {
 
             <div className="recipe-output">
                 <h2>Recipe Output:</h2>
-                
                 <div className="actualoutput" dangerouslySetInnerHTML={{ __html: recipe }} />
             </div>
         </div>

@@ -177,3 +177,37 @@ div {
   margin: 10px 0; /* Space between paragraphs */
   color: #555;
 }
+/* List item styling */
+.items ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+/* Styling for the remove button (minus) */
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the remove button */
+.remove-button:hover {
+  background-color: #ff4d4d;
+}

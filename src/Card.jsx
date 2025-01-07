@@ -1,7 +1,8 @@
+// filepath: /Users/jatinkushwaha/My-Files/dev/chefrecommenadtion/src/Card.jsx
 import { useState } from "react";
 import { HfInference } from "@huggingface/inference";
 
-const client = process.env.REACT_APP_API_KEY;
+const client = new HfInference(import.meta.env.VITE_REACT_APP_API_KEY);
 
 const prompt = "You are a helpful chef assistant that provides recipes based on a given set of ingredients. The entire recipe output should be in HTML markdown format for easy rendering.";
 

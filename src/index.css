@@ -1,0 +1,179 @@
+body {
+  background-color: dimgray;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* border: 2px solid black;  */
+}
+
+#root {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start; /* Align items to the top vertically */
+  align-items: center;         /* Align items to the center horizontally */
+  flex-direction: column;      /* Arrange items in a column */
+  height: 100vh;               /* Full viewport height */
+  border-radius: 10px;
+  background-color: white;
+  overflow-x: auto;
+}
+
+/* Card container styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  /* overflow-x: auto; */
+}
+
+
+/* Input container styling */
+#input-container {
+  display: flex;
+  gap: 10px; /* Space between input and button */
+  align-items: center;
+  width: 100%;
+}
+
+/* Input styling */
+.input {
+  flex: 1; 
+  min-width: 100px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  background: #e8e8e8;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 17px #c8c8c8, -5px -5px 17px #ffffff;
+  transition: box-shadow 0.3s;
+}
+
+
+/* Submit button styling */
+#submit-button {
+  display: flex;
+  justify-content: center;
+  max-width: 100px;
+  align-items: center;
+  padding: 10px;
+  background-color: #0000008b;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#submit-button:hover {
+  background-color: #0000009f;
+}
+.items{
+  display: inline;
+}
+.items ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List item styling */
+.items ul li {
+  margin: 10px 0;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+#get-button {
+  display: flex;
+  justify-content: center;
+  max-width: 150px;
+  align-items: center;
+  padding: 10px;
+  background-color: #0000008b;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.2s;
+}
+
+#get-button:hover {
+  background-color: #0000009f;
+  transform: scale(1.05);
+}
+#get-button:active {
+  transform: scale(0.9);
+}
+.recipe-output{
+  display: flex;
+  flex-direction: column;
+
+}
+.actualoutput {
+  display: flex;
+  flex-direction: column; /* Ensures content flows vertically */
+  align-items: flex-start; /* Aligns content to the left */
+  width: 100%; /* Full width of parent container */
+  max-width: 90%; /* Optional: Restrict max width to maintain readability */
+  margin: 10px auto; /* Center and add spacing */
+  word-wrap: break-word; /* Wrap long text */
+  overflow-wrap: break-word; /* Additional wrap safeguard */
+  padding: 20px; /* Space inside the container */
+  box-sizing: border-box; /* Include padding in width calculation */
+  background-color: #f9f9f9; /* Light background for clarity */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  line-height: 1.6; /* Improved readability */
+}
+.recipe-output {
+  display: flex;
+  flex-direction: column; /* Ensures content flows vertically */
+  align-items: flex-start; /* Aligns content to the left */
+  width: 100%; /* Full width of parent container */
+  max-width: 90%; /* Optional: Restrict max width to maintain readability */
+  margin: 10px auto; /* Center and add spacing */
+  word-wrap: break-word; /* Wrap long text */
+  overflow-wrap: break-word; /* Additional wrap safeguard */
+  padding: 20px; /* Space inside the container */
+  box-sizing: border-box; /* Include padding in width calculation */
+  background-color: #f9f9f9; /* Light background for clarity */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Adjust headings for consistent spacing and size */
+.recipe-output h1,
+.recipe-output h2 {
+  margin: 20px 0 10px; /* Add space above and below */
+  color: #333;
+  font-size: 1.8em; /* Adjust heading size */
+}
+
+/* Adjust list styling */
+.recipe-output ul,
+.recipe-output ol {
+  margin: 10px 0 10px 20px; /* Indent lists */
+  padding: 0;
+}
+
+/* Adjust list item styling */
+.recipe-output ul li,
+.recipe-output ol li {
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.recipe-output p {
+  margin: 10px 0; /* Space between paragraphs */
+  color: #555;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HfInference } from "@huggingface/inference";
 
-const client = new HfInference(import.meta.env.VITE_REACT_APP_HUGGINGFACE_API_KEY);
+const client = process.env.REACT_APP_API_KEY;
 
 const prompt = "You are a helpful chef assistant that provides recipes based on a given set of ingredients. The entire recipe output should be in HTML markdown format for easy rendering.";
 

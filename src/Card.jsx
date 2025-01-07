@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HfInference } from "@huggingface/inference";
 
-const client = new HfInference("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");
+const client = new HfInference(import.meta.env.VITE_REACT_APP_HUGGINGFACE_API_KEY);
 
 const prompt = "You are a helpful chef assistant that provides recipes based on a given set of ingredients. The entire recipe output should be in HTML markdown format for easy rendering.";
 
@@ -39,7 +39,7 @@ export default function Card() {
                             content: `Ingredients: ${content}`
                         }
                     ],
-                    max_tokens: 2000
+                    max_tokens: 1000
                 });
 
                 // console.log(chatCompletion.choices[0].message.content);
